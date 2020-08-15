@@ -4,3 +4,23 @@
     Author URI: http://xaaser2006.ru/
     Version: 1.0
 */
+
+header {
+    padding: 50px 0;
+}
+
+.home header {
+    padding: 50px 0 170px;
+}
+
+#form-order-file {
+    margin-bottom: 10px;
+}
+
+.acceptance-455 {
+    margin-top: -10px;
+    align-self: center;
+    color: #635454;
+    font-size: 20px;
+    line-height: 1;
+}

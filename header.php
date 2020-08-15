@@ -14,9 +14,9 @@
         <div class="container-fluid mb-4">
             <div class="row align-items-center align-items-lg-start">
                 <div class="col-auto">
-                    <a class="logo" href="<?php echo get_home_url();  ?>">
-                        <img src="<?php bloginfo('template_url'); ?>/assets/img/life-web.png" alt="life-web">
-                    </a>
+                    <div class="logo">
+                        <?php the_custom_logo(); ?>
+                    </div>
                 </div>
                 <div class="col">
                     <div class="row justify-content-end align-items-center align-items-lg-start mb-lg-4 mr-8">
@@ -30,7 +30,7 @@
                                 ] ); ?>
                             </div>
                         </div>
-                        <div class="col-auto d-none d-sm-block offset-0 offset-xl-1"><a href="tel:<?php echo get_field('tel', 7); ?>" class="phone"><?php echo get_field('tel', 7); ?></a></div>
+                        <div class="col-auto d-none d-sm-block offset-0 offset-xl-1"><a href="tel:<?php echo get_field('telefon', 7); ?>" class="phone"><?php echo get_field('telefon', 7); ?></a></div>
                         <div class="col-auto d-none d-sm-block offset-0 offset-xl-1">
                             <div class="lang"><a href="#" class="link-lang">RU</a><a href="#" class="link-lang">EN</a></div>
                         </div>
@@ -46,7 +46,7 @@
                         <div class="col">
                             <div class="nav-bottom">
                                 <ul>
-                                    <li><a href="#">РАЗРАБОТКА  САЙТОВ</a></li>
+                                    <li><a href="#">РАЗРАБОТКА САЙТОВ</a></li>
                                     <li><a href="#">Техническая поддержка сайтов</a></li>
                                     <li><a href="#">Тестирование ПО</a></li>
                                     <li><a href="#">Интернет реклама</a></li>
@@ -57,15 +57,64 @@
                 </div>
             </div>
         </div>
+
+        <?php if( is_front_page() ):  ?>
+
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-xl-6">
-                    <h1>Эффективная разработка<br> и тестирование ПО</h1>
-                    <p>Обеспечиваем качество на всех этапах работы</p>
+                    <h1><?php echo get_field('zagolovok_h1', 7); ?></h1>
+                    <p><?php echo get_field('podzagolovok', 7); ?></p>
                 </div>
                 <div class="col-lg-4 col-xl-6">
                     <a href="#order" class="btn-header">Получить консультацию</a>
                 </div>
             </div>
         </div>
+
+        <?php elseif( is_category() ):  ?>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-xl-6">
+                    <h1><?php single_cat_title(); ?></h1>
+                    <p><?php echo category_description(); ?></p>
+                </div>
+            </div>
+        </div>
+
+        <?php elseif( is_home() ):  ?>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-xl-6">
+                    <h1>Блог</h1>
+                    <p>Наши статьи</p>
+                </div>
+            </div>
+        </div>
+
+        <?php elseif( is_404() ):  ?>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-xl-6">
+                    <h1>404!</h1>
+                </div>
+            </div>
+        </div>
+
+        <?php else:  ?>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-xl-6">
+                    <h1><?php the_title(); ?></h1>
+                    <!-- <p>описание</p> -->
+                </div>
+            </div>
+        </div>
+
+        <?php endif;  ?>
+
     </header>

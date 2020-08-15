@@ -11,11 +11,17 @@
 
     add_action('after_setup_theme', function(){
 		// add_theme_support('post-thumbnails', ['post', 'services', 'team', 'sertificates']);
-		// add_theme_support('custom-logo');
+		add_theme_support('custom-logo');
 		add_theme_support('title-tag');
 		// add_theme_support('post-formats', ['aside', 'quote']);
 		
 		// add_image_size('flats-thumb', 400, 300, true);
 	});
 
-    
+	// Удалим названия сайта в конце заголовка
+	// add_filter( 'document_title_parts', function( $parts ){
+
+	// 	if( isset($parts['site']) ) unset($parts['site']);
+
+	// 	return $parts;
+	// });
