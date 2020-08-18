@@ -25,7 +25,7 @@
                                 <?php wp_nav_menu( [
                                     'theme_location' => 'header-top',
                                     'container'       => null, 
-                                    'menu_class'      => 'header__navigation',
+                                    'menu_class'      => 'header-top__navigation',
                                     'depth'           => 1
                                 ] ); ?>
                             </div>
@@ -45,12 +45,12 @@
                     <div class="row d-none d-lg-flex mr-8">
                         <div class="col">
                             <div class="nav-bottom">
-                                <ul>
-                                    <li><a href="#">РАЗРАБОТКА САЙТОВ</a></li>
-                                    <li><a href="#">Техническая поддержка сайтов</a></li>
-                                    <li><a href="#">Тестирование ПО</a></li>
-                                    <li><a href="#">Интернет реклама</a></li>
-                                </ul>
+                                <?php wp_nav_menu( [
+                                    'theme_location' => 'header-bottom',
+                                    'container'       => null, 
+                                    'menu_class'      => 'header-bottom__navigation',
+                                    'depth'           => 1
+                                ] ); ?>
                             </div>
                         </div>
                     </div>
@@ -91,6 +91,9 @@
                     <h1>Блог</h1>
                     <p>Наши статьи</p>
                 </div>
+                <div class="col-lg-4 col-xl-6">
+                    <a href="<?php echo get_permalink(20); ?>" class="btn-header">Получить консультацию</a>
+                </div>
             </div>
         </div>
 
@@ -101,6 +104,9 @@
                 <div class="col-lg-8 col-xl-6">
                     <h1>404!</h1>
                 </div>
+                <div class="col-lg-4 col-xl-6">
+                    <a href="<?php echo get_permalink(20); ?>" class="btn-header">Получить консультацию</a>
+                </div>
             </div>
         </div>
 
@@ -109,8 +115,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-xl-6">
-                    <h1><?php the_title(); ?></h1>
-                    <!-- <p>описание</p> -->
+                    <h1><?php echo get_field('zagolovok_h1', 7); ?></h1>
+                    <p><?php echo get_field('podzagolovok', 7); ?></p>
+                </div>
+                <div class="col-lg-4 col-xl-6">
+                    <a href="<?php echo get_permalink(20); ?>" class="btn-header">Получить консультацию</a>
                 </div>
             </div>
         </div>

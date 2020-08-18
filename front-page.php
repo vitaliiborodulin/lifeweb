@@ -6,61 +6,80 @@
             <div class="col-sm-6 col-lg-3">
                 <div class="container-service develop">
                     <div class="service-img"><img class="align-self-start" src="<?php bloginfo('template_url'); ?>/assets/img/icons/develop.png" alt="develop"></div>
-                    <div class="service-name">РАЗРАБОТКА  САЙТОВ</div>
-                    <ul class="service-work-list">
-                        <li><a href="#">сайт-визитка</a></li>
-                        <li><a href="#">корпоративный сайт</a></li>
-                        <li><a href="#">интернет-магазин</a></li>
-                        <li><a href="#">фирменный стиль</a></li>
-                        <li><a href="#">редизайн сайта</a></li>
-                    </ul>
+                    <div class="service-name"><?php echo get_the_title(56); ?></div>
+ 
+                        <?php $arg = [
+                            'depth'        => 1,
+                            'title_li'     => null,
+                            'child_of' => 56 
+                        ]; //здесь выводим список дочерних страниц если они есть
+                        ?>
+                        <ul class="service-work-list">
+                            <?php wp_list_pages( $arg ) ?>
+                        </ul>
+
                     <div class="btn-container">
-                        <a href="#" class="btn-transparent"><div class="container-bg">Узнать больше</div></a>
+                        <a href="<?php echo get_permalink(56); ?>" class="btn-transparent"><div class="container-bg">Узнать больше</div></a>
                     </div>
                 </div>
             </div>
             <div class="col-sm-6 col-lg-3">
                 <div class="container-service support">
                     <div class="service-img"><img src="<?php bloginfo('template_url'); ?>/assets/img/icons/support.png" alt="support"></div>
-                    <div class="service-name">Техническая поддержка</div>
-                    <ul class="service-work-list">
-                        <li><a href="#">разработка техдокументации</a></li>
-                        <li><a href="#">техническая поддержка</a></li>
-                        <li><a href="#">комплексная поддержка</a></li>
-                        <li><a href="#">хостинг</a></li>
-                    </ul>
+                    <div class="service-name"><?php echo get_the_title(68); ?></div>
+
+                        <?php $arg = [
+                            'depth'        => 1,
+                            'title_li'     => null,
+                            'child_of' => 68 
+                            ]; //здесь выводим список дочерних страниц если они есть
+                        ?>
+                        <ul class="service-work-list">
+                            <?php wp_list_pages( $arg ) ?>
+                        </ul>
+
                     <div class="btn-container">
-                        <a href="#" class="btn-transparent"><div class="container-bg">Узнать больше</div></a>
+                        <a href="<?php echo get_permalink(68); ?>" class="btn-transparent"><div class="container-bg">Узнать больше</div></a>
                     </div>
                 </div>
             </div>
             <div class="col-sm-6 col-lg-3">
                 <div class="container-service testing">
                     <div class="service-img"><img src="<?php bloginfo('template_url'); ?>/assets/img/icons/testing.png" alt="testing"></div>
-                    <div class="service-name">Тестирование ПО</div>
+                    <div class="service-name"><?php echo get_the_title(78); ?></div>
+                    
+                    <?php $arg = [
+                            'depth'        => 1,
+                            'title_li'     => null,
+                            'child_of' => 78 
+                            ]; //здесь выводим список дочерних страниц если они есть
+                    ?>
                     <ul class="service-work-list">
-                        <li><a href="#">анализ юзабилити</a></li>
-                        <li><a href="#">функциональное тестирование</a></li>
-                        <li><a href="#">автоматизация тестирование</a></li>
-                        <li><a href="#">тестирование документации</a></li>
+                            <?php wp_list_pages( $arg ) ?>
                     </ul>
+
                     <div class="btn-container">
-                        <a href="#" class="btn-transparent"><div class="container-bg">Узнать больше</div></a>
+                        <a href="<?php echo get_permalink(78); ?>" class="btn-transparent"><div class="container-bg">Узнать больше</div></a>
                     </div>
                 </div>
             </div>
             <div class="col-sm-6 col-lg-3">
                 <div class="container-service pr">
                     <div class="service-img"><img class="align-self-start" src="<?php bloginfo('template_url'); ?>/assets/img/icons/pr.png" alt="pr"></div>
-                    <div class="service-name">Интернет реклама</div>
-                    <ul class="service-work-list">
-                        <li><a href="#">Яндекс.Директ</a></li>
-                        <li><a href="#">аудит сайта</a></li>
-                        <li><a href="#">продвижение статьями</a></li>
-                        <li><a href="#">соцсети</a></li>
+                    <div class="service-name"><?php echo get_the_title(88); ?></div>
+                    
+                    <?php $arg = [
+                            'depth'        => 1,
+                            'title_li'     => null,
+                            'child_of' => 88 
+                            ]; //здесь выводим список дочерних страниц если они есть
+                    ?>
+                     <ul class="service-work-list">
+                            <?php wp_list_pages( $arg ) ?>
                     </ul>
+
                     <div class="btn-container">
-                        <a href="#" class="btn-transparent"><div class="container-bg">Узнать больше</div></a>
+                        <a href="<?php echo get_permalink(88); ?>" class="btn-transparent"><div class="container-bg">Узнать больше</div></a>
                     </div>
                 </div>
             </div>
@@ -89,22 +108,22 @@
                 <div class="container-reasons left">
                     <div class="container-reason top">
                         <div class="text-reason pl-100 ls-2 mb-77">
-                            <div class="name-reason">ГИБКИЙ ПОДХОД</div>
-                            <div class="desc-reason">Мы готовы обеспечить вас ресурсами в зависимости от условий проекта.</div>
+                            <div class="name-reason"><?php echo get_field('zagolovok_my_1', 7); ?></div>
+                            <div class="desc-reason"><?php echo get_field('tekst_my_1', 7); ?></div>
                         </div>
                         <div class="img-reason"><img src="<?php bloginfo('template_url'); ?>/assets/img/icons/why-us.png" alt="icon"></div>
                     </div>
                     <div class="container-reason middle mb-63">
                         <div class="text-reason pl-10">
-                            <div class="name-reason">ПРИОРИТЕТЫ</div>
-                            <div class="desc-reason">Мы сфокусируемся на самых важных вопросах, чтобы максимально эффективно использовать ресурсы и оптимизировать расход бюджета</div>
+                            <div class="name-reason"><?php echo get_field('zagolovok_my_2', 7); ?></div>
+                            <div class="desc-reason"><?php echo get_field('tekst_my_2', 7); ?></div>
                         </div>
                         <div class="img-reason"><img src="<?php bloginfo('template_url'); ?>/assets/img/icons/why-us-1.png" alt="icon"></div>
                     </div>
                     <div class="container-reason bottom">
                         <div class="text-reason pl-10">
-                            <div class="name-reason">ПРИОРИТЕТЫ</div>
-                            <div class="desc-reason">Мы сфокусируемся на самых важных вопросах, чтобы максимально эффективно использовать ресурсы и оптимизировать расход бюджета</div>
+                            <div class="name-reason"><?php echo get_field('zagolovok_my_3', 7); ?></div>
+                            <div class="desc-reason"><?php echo get_field('tekst_my_3', 7); ?></div>
                         </div>
                         <div class="img-reason"><img src="<?php bloginfo('template_url'); ?>/assets/img/icons/why-us-2.png" alt="icon"></div>
                     </div>
@@ -117,22 +136,22 @@
                 <div class="container-reasons right">
                     <div class="container-reason top">
                         <div class="text-reason ls-2">
-                            <div class="name-reason">ШИРОКИЙ СПЕКТР ТЕХНОЛОГИЙ</div>
-                            <div class="desc-reason">Знание и умение применять различные инструменты разработки и тестирования помогают нам во многих проектах.</div>
+                            <div class="name-reason"><?php echo get_field('zagolovok_my_4', 7); ?></div>
+                            <div class="desc-reason"><?php echo get_field('tekst_my_4', 7); ?></div>
                         </div>
                         <div class="img-reason"><img src="<?php bloginfo('template_url'); ?>/assets/img/icons/why-us-3.png" alt="icon"></div>
                     </div>
                     <div class="container-reason middle mb-80">
                     <div class="text-reason">
-                        <div class="name-reason">ПОДДЕРЖКА</div>
-                        <div class="desc-reason">Мы полностью готовы берем ответсвенность за выполнение работ и готовы гарантировать их качество.</div>
+                        <div class="name-reason"><?php echo get_field('zagolovok_my_5', 7); ?></div>
+                        <div class="desc-reason"><?php echo get_field('tekst_my_5', 7); ?></div>
                     </div>
                     <div class="img-reason"><img src="<?php bloginfo('template_url'); ?>/assets/img/icons/why-us-4.png" alt="icon"></div>
                 </div>
                     <div class="container-reason bottom">
                         <div class="text-reason">
-                            <div class="name-reason">ПОДДЕРЖКА</div>
-                            <div class="desc-reason">Мы полностью готовы берем ответсвенность за выполнение работ и готовы гарантировать их качество.</div>
+                            <div class="name-reason"><?php echo get_field('zagolovok_my_6', 7); ?></div>
+                            <div class="desc-reason"><?php echo get_field('tekst_my_6', 7); ?></div>
                         </div>
                         <div class="img-reason"><img src="<?php bloginfo('template_url'); ?>/assets/img/icons/why-us-5.png" alt="icon"></div>
                     </div>

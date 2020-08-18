@@ -24,3 +24,50 @@ header {
     font-size: 20px;
     line-height: 1;
 }
+
+.acceptance-455 span {
+    margin: 0;
+}
+
+.acceptance-455 a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.error404 h2 {
+    font-size: 40px;
+    margin: 100px 0;
+    text-align: center;
+}
+
+/* footer */
+
+.footer-list {
+    text-align: center;
+}
+.footer-list .sub-menu li{
+    text-align: center;
+ }
+
+.footer-list > a {
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    text-decoration: none;
+    display: block;
+    transition:  ease .4s;
+    line-height: 1;
+    height: 25px;
+}
+
+.footer-list > a:hover {
+    font-size: 22px;
+}
+
+
+
+@media screen and (max-width: 1359px){
+    
+}

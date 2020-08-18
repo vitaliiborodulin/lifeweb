@@ -1,6 +1,6 @@
 <footer>
         <div class="container">
-            <div class="row justify-content-center justify-content-sm-between justify-content-lg-center mb-3">
+            <!-- <div class="row justify-content-center justify-content-sm-between justify-content-lg-center mb-3">
                 <div class="col col-sm-6  col-xl-3">
                     <div class="footer-list">
                         <a href="#" class="head-list">Разработка сайтов</a>
@@ -47,7 +47,15 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+            </div> -->
+            
+                <?php wp_nav_menu( [
+                    'theme_location' => 'footer',
+                    'container'       => 'div', 
+                    'items_wrap'      => '<ul id="%1$s" class=" footer__navigation row justify-content-center justify-content-sm-between justify-content-lg-center mb-3 %2$s">%3$s</ul>',
+                    'depth'           => 2
+                ] ); ?>
+            
             <div class="row">
                 <div class="col-12">
                     <p class="text-center">© 2008-2020   LifeWEB    Все права защищены.</p>
@@ -67,7 +75,7 @@
                     </div>
                 </div>
             <div class="row justify-content-between">
-                <div class="col-auto"><a href="tel:89117967025" class="phone"><?php echo get_field('tel', 7); ?></a></div>
+                <div class="col-auto"><a href="tel:<?php echo get_field('tel', 7); ?>" class="phone"><?php echo get_field('tel', 7); ?></a></div>
                 <div class="col-auto">
                     <div class="lang">
                         <a href="#" class="link-lang">RU</a>
@@ -75,21 +83,25 @@
                     </div>
                 </div>
             </div>
-            <ul>
-                <li><a href="#">О компании</a></li>
-                <li><a href="#">Портфолио</a></li>
-                <li><a href="#">Блог</a></li>
-                <li><a href="#">Контакты</a></li>
-                <li><a href="#">РАЗРАБОТКА  САЙТОВ</a></li>
-                <li><a href="#">Техническая поддержка<br> сайтов</a></li>
-                <li><a href="#">Тестирование ПО</a></li>
-                <li><a href="#">Интернет реклама</a></li>
-            </ul>
+            <?php wp_nav_menu( [
+                'theme_location' => 'header-top',
+                'container'       => null, 
+                'menu_class'      => 'header-top__navigation',
+                'depth'           => 1
+            ] ); ?>
+            <?php wp_nav_menu( [
+                'theme_location' => 'header-bottom',
+                'container'       => null, 
+                'menu_class'      => 'header-bottom__navigation',
+                'depth'           => 1
+            ] ); ?>
         </div>
     </div>
 
 
     
     <?php wp_footer();  ?>
+    <?php //dynamic_sidebar('sidebar-metrika'); ?>
+    <?php echo get_field('metrika', 7); ?>
 </body>
 </html>
