@@ -11,6 +11,7 @@
                         <?php $arg = [
                             'depth'        => 1,
                             'title_li'     => null,
+                            'sort_column'  => 'post_date',
                             'child_of' => 56 
                         ]; //здесь выводим список дочерних страниц если они есть
                         ?>
@@ -31,6 +32,7 @@
                         <?php $arg = [
                             'depth'        => 1,
                             'title_li'     => null,
+                            'sort_column'  => 'post_date',
                             'child_of' => 68 
                             ]; //здесь выводим список дочерних страниц если они есть
                         ?>
@@ -51,6 +53,7 @@
                     <?php $arg = [
                             'depth'        => 1,
                             'title_li'     => null,
+                            'sort_column'  => 'post_date',
                             'child_of' => 78 
                             ]; //здесь выводим список дочерних страниц если они есть
                     ?>
@@ -71,6 +74,7 @@
                     <?php $arg = [
                             'depth'        => 1,
                             'title_li'     => null,
+                            'sort_column'  => 'post_date',
                             'child_of' => 88 
                             ]; //здесь выводим список дочерних страниц если они есть
                     ?>
@@ -177,65 +181,38 @@
             </div>
             <div class="col-12">
                 <div class="container-slider">
+                    <?php $cases = get_posts(['post_type' => 'portfolio', 'numberposts' => -1]);?>
+                    
                     <div class="slides">
-                        <div class="slide">
-                            <div class="project"><img src="<?php bloginfo('template_url'); ?>/assets/img/projects/project-1.png" alt="project-1" class="img-project">
-                                <div class="project-info">
-                                    <div class="info-container">
-                                        <div class="project-name">Autom1.ru</div>
-                                        <ul class="option-list">
-                                            <li>Разработака сайта в 2018 г.</li>
-                                            <li>Продвижение сайта</li>
-                                        </ul>
+
+                        <?php foreach($cases as $case): ?>
+                            <div class="slide">
+                                <div class="project"><img src="<?php echo get_the_post_thumbnail_url($case);  ?>" alt="" class="img-project">
+                                    <div class="project-info">
+                                        <div class="info-container">
+                                            <div class="project-name"><?php echo get_the_title($case); ?><br><span><?php echo get_field('podzagolovok_kejsa', $case); ?></span></div>
+                                            <ul class="option-list">
+
+                                                <?php if( get_field('chto_sdelano_v_kejse_1', $case) ): ?> 
+                                                    <li><?php the_field('chto_sdelano_v_kejse_1', $case); ?></li>
+                                                <?php endif;?>
+
+                                                <?php if( get_field('chto_sdelano_v_kejse_2', $case) ): ?> 
+                                                    <li><?php the_field('chto_sdelano_v_kejse_2', $case); ?></li>
+                                                <?php endif;?>
+                                                
+                                                <?php if( get_field('chto_sdelano_v_kejse_3', $case) ): ?> 
+                                                    <li><?php the_field('chto_sdelano_v_kejse_3', $case); ?></li>
+                                                <?php endif;?>
+                                                
+                                            </ul>
+                                        </div>
+                                        <a href="<?php echo get_the_permalink($case); ?>" class="link">Подробнее</a>
                                     </div>
-                                    <a href="#" class="link">Подробнее</a>
                                 </div>
                             </div>
-                        </div>
-                        <div class="slide">
-                            <div class="project"><img src="<?php bloginfo('template_url'); ?>/assets/img/projects/project-2.png" alt="project-2" class="img-project">
-                                <div class="project-info">
-                                    <div class="info-container">
-                                        <div class="project-name">Fishingnews.ru<br><span>Рыболовный интернет-maгaзин</span></div>
-                                        <ul class="option-list">
-                                            <li>Разработка сайта в 2010 г.</li>
-                                            <li>Перенос сайта на Shope-skript в 2020</li>
-                                            <li>Техническая поддержка</li>
-                                        </ul>
-                                    </div>
-                                    <a href="#" class="link">Подробнее</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide">
-                            <div class="project"><img src="<?php bloginfo('template_url'); ?>/assets/img/projects/project-1.png" alt="project-1" class="img-project">
-                                <div class="project-info">
-                                    <div class="info-container">
-                                        <div class="project-name">Autom1.ru</div>
-                                        <ul class="option-list">
-                                            <li>Разработака сайта в 2018 г.</li>
-                                            <li>Продвижение сайта</li>
-                                        </ul>
-                                    </div>
-                                    <a href="#" class="link">Подробнее</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide">
-                            <div class="project"><img src="<?php bloginfo('template_url'); ?>/assets/img/projects/project-2.png" alt="project-2" class="img-project">
-                                <div class="project-info">
-                                    <div class="info-container">
-                                        <div class="project-name">Fishingnews.ru<br><span>Рыболовный интернет-maгaзин</span></div>
-                                        <ul class="option-list">
-                                            <li>Разработка сайта в 2010 г.</li>
-                                            <li>Перенос сайта на Shope-skript в 2020</li>
-                                            <li>Техническая поддержка</li>
-                                        </ul>
-                                    </div>
-                                    <a href="#" class="link">Подробнее</a>
-                                </div>
-                            </div>
-                        </div>
+                        <?php endforeach; ?>
+
                     </div>
                     <div class="control">
                         <div class="btn-prev">

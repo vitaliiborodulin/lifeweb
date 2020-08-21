@@ -1,53 +1,5 @@
 <footer>
         <div class="container">
-            <!-- <div class="row justify-content-center justify-content-sm-between justify-content-lg-center mb-3">
-                <div class="col col-sm-6  col-xl-3">
-                    <div class="footer-list">
-                        <a href="#" class="head-list">Разработка сайтов</a>
-                        <ul>
-                            <li><a href="#">сайт-визитка</a></li>
-                            <li><a href="#">корпоративный сайт</a></li>
-                            <li><a href="#">интернет-магазин</a></li>
-                            <li><a href="#">фирменный стиль</a></li>
-                            <li><a href="#">редизайн сайта</a></li>
-                            <li><a href="#">адаптивный дизайн</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-6  col-xl-3">
-                    <div class="footer-list">
-                        <a href="#" class="head-list">Техническая поддержка</a>
-                        <ul>
-                            <li><a href="#">разработка техдокументации</a></li>
-                            <li><a href="#">техническая поддержка</a></li>
-                            <li><a href="#">комплексная поддержка</a></li>
-                            <li><a href="#">хостинг</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-6  col-xl-3">
-                    <div class="footer-list">
-                        <a href="#" class="head-list">Тестирование ПО</a>
-                        <ul>
-                            <li><a href="#">анализ юзабилити</a></li>
-                            <li><a href="#">функциональное тестирование</a></li>
-                            <li><a href="#">автоматизация тестирования</a></li>
-                            <li><a href="#">тестирование документации</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-6  col-xl-3">
-                    <div class="footer-list">
-                        <a href="#" class="head-list">ИНТЕРНЕТ РЕКЛАМА</a>
-                        <ul>
-                            <li><a href="#">Яндекс.Директ</a></li>
-                            <li><a href="#">аудит сайта</a></li>
-                            <li><a href="#">продвижение статьями</a></li>
-                            <li><a href="#">соцсети</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div> -->
             
                 <?php wp_nav_menu( [
                     'theme_location' => 'footer',

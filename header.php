@@ -97,6 +97,20 @@
             </div>
         </div>
 
+        <?php elseif( is_post_type_archive('portfolio') ):  ?>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-xl-6">
+                    <h1>Портфолио</h1>
+                    <p>Наши кейсы</p>
+                </div>
+                <div class="col-lg-4 col-xl-6">
+                    <a href="<?php echo get_permalink(20); ?>" class="btn-header">Получить консультацию</a>
+                </div>
+            </div>
+        </div>
+
         <?php elseif( is_404() ):  ?>
 
         <div class="container">

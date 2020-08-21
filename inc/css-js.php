@@ -15,3 +15,26 @@
         wp_enqueue_script('slick', LW_DIR_JS . 'slick.min.js',  [], null, true);
         wp_enqueue_script('template', LW_DIR_JS . 'template.js',  [], null, true);
     });
+
+    add_filter( 'nav_menu_css_class', 'add_my_class_to_nav_menu', 10, 4 );
+	function add_my_class_to_nav_menu( $classes, $item, $args, $depth ){
+		/* $classes содержит
+		Array(
+			[1] => menu-item
+			[2] => menu-item-type-post_type
+			[3] => menu-item-object-page
+			[4] => menu-item-284
+		)
+		*/
+		if($args->container == 'div') {
+			// print_r($args);
+
+			if($item->menu_item_parent == 0) {
+				$classes[] = 'col-sm-6  col-xl-3 footer-list';
+			}
+			// print_r($item);
+			// $classes[] = '';
+		}
+
+		return $classes;
+	}

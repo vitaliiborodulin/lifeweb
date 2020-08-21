@@ -40,14 +40,18 @@ header {
     text-align: center;
 }
 
-/* footer */
+/* portfolio */
 
-.footer-list {
-    text-align: center;
+@media screen and (max-width: 1359px){
+    .info-container ul {
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
 }
-.footer-list .sub-menu li{
-    text-align: center;
- }
+
+/* footer */
 
 .footer-list > a {
     text-transform: uppercase;
@@ -69,5 +73,10 @@ header {
 
 
 @media screen and (max-width: 1359px){
-    
+    .footer-list {
+    text-align: center;
+	}
+	.footer-list .sub-menu li{
+		text-align: center;
+	 }
 }
