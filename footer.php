@@ -10,9 +10,10 @@
             
             <div class="row">
                 <div class="col-12">
-                    <p class="text-center">© 2008-2020   LifeWEB    Все права защищены.</p>
+                    <p class="text-center">© 2008-<?php echo date('Y'); ?>   LifeWEB    Все права защищены.</p>
                     <p class="text-center">Информация на сайте life-web.ru носит исключительно информационный характер и не является публичной офертой,<br> определяемой положениями  Статьи 437 (2) Гражданского кодекса РФ.</p>
                     <p class="text-center">Для получения подробной информации о стоимости услуг, пожалуйста, отправьте свое сообщение с помощью специальной формы связи на нашем сайте</p>
+                    <p class="text-center"><a class="footer__map" href="<?php echo get_permalink(162); ?>">Карта сайта</a></p>
                 </div>
             </div>
         </div>
@@ -53,7 +54,6 @@
 
     
     <?php wp_footer();  ?>
-    <?php //dynamic_sidebar('sidebar-metrika'); ?>
     <?php echo get_field('metrika', 7); ?>
 </body>
 </html>

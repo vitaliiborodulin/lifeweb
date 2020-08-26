@@ -8,6 +8,7 @@
 
     include_once('inc/css-js.php');
 	include_once('inc/menu.php');
+	include_once('inc/fixes.php');
 	// include_once('inc/sidebar.php');
 
     add_action('after_setup_theme', function(){
@@ -16,7 +17,7 @@
 		add_theme_support('title-tag');
 		// add_theme_support('post-formats', ['aside', 'quote']);
 		
-		// add_image_size('case-thumb', 400, 300, true);
+		add_image_size('case-thumb', 400, 300, true);
 	});
 
 	include_once('inc/modules/portfolio.php');

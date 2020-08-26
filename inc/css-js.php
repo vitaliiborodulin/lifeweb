@@ -6,6 +6,7 @@
         wp_enqueue_style('slick', LW_DIR_CSS . 'slick.css');
         wp_enqueue_style('slick-theme', LW_DIR_CSS . 'slick-theme.css');
         wp_enqueue_style('template', LW_DIR_CSS . 'template.css');
+        // wp_enqueue_style('fontawesome', LW_DIR_CSS . 'fontawesome.min.css');
         wp_enqueue_style('jquery-fancybox', 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css');
         wp_enqueue_style( 'style', get_stylesheet_uri() );
 

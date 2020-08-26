@@ -1,11 +1,14 @@
 <?php get_header(); ?>
 
 
-
-
 <div class="text-1">
     <div class="container">
-        <div class="row justify-content-center">
+
+		<?php if ( function_exists('yoast_breadcrumb') ) {
+				yoast_breadcrumb( '<div class="breadcrumb py-2">','</div>' );
+			} ?>
+		
+        <div class="row">
 			<?php if(have_posts()): 
 					while(have_posts()): the_post(); ?>
 						<div class="col-lg-10">
@@ -21,7 +24,7 @@
 
 <div class="inner-page-list mb-3">
 	<div class="container">
-		<div class="row justify-content-center">
+		<div class="row">
 			<div class="col-lg-10">
 				<?php $arg = [
 				'depth'        => 1,
@@ -35,6 +38,5 @@
 		</div>
 	</div>
 </div>
-
 
 <?php get_footer(); ?>

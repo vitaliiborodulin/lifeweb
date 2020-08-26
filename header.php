@@ -32,7 +32,10 @@
                         </div>
                         <div class="col-auto d-none d-sm-block offset-0 offset-xl-1"><a href="tel:<?php echo get_field('telefon', 7); ?>" class="phone"><?php echo get_field('telefon', 7); ?></a></div>
                         <div class="col-auto d-none d-sm-block offset-0 offset-xl-1">
-                            <div class="lang"><a href="#" class="link-lang">RU</a><a href="#" class="link-lang">EN</a></div>
+                            <div class="lang">
+ 								<a href="#" class="link-lang">RU</a>
+								<a href="#" class="link-lang">EN</a> 
+							</div>
                         </div>
                         <div class="col-auto d-lg-none">
                             <a href="#mobile-menu" class="mobile-menu-link">

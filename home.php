@@ -3,7 +3,12 @@
 
 <div class="text-1">
     <div class="container">
-        <div class="row justify-content-center">
+
+		<?php if ( function_exists('yoast_breadcrumb') ) {
+			yoast_breadcrumb( '<div class="breadcrumb py-2">','</div>' );
+		} ?>
+
+        <div class="row">
 			<?php if(have_posts()): 
 					while(have_posts()): the_post(); ?>
 						<div class="col-lg-10">
@@ -18,8 +23,8 @@
 				Записей нет!
 			<?php endif; ?>
 
-			<?php the_posts_pagination() ?>
 		</div>
+		<?php the_posts_pagination(); ?>
     </div>
 </div>
 
