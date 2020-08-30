@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
 
     <?php wp_head();  ?>
+    <?php echo get_field('metrika', 7); ?>
 </head>
 <body <?php body_class() ?>>
 <a href="#header" class="link-top"></a>
@@ -32,10 +33,11 @@
                         </div>
                         <div class="col-auto d-none d-sm-block offset-0 offset-xl-1"><a href="tel:<?php echo get_field('telefon', 7); ?>" class="phone"><?php echo get_field('telefon', 7); ?></a></div>
                         <div class="col-auto d-none d-sm-block offset-0 offset-xl-1">
-                            <div class="lang">
- 								<a href="#" class="link-lang">RU</a>
-								<a href="#" class="link-lang">EN</a> 
-							</div>
+                            <ul class="lang">
+                                <?php if ( function_exists('pll_the_languages') ) {
+                                    pll_the_languages(['display_names_as' => 'slug']);  
+                                } ?>
+							</ul>
                         </div>
                         <div class="col-auto d-lg-none">
                             <a href="#mobile-menu" class="mobile-menu-link">
@@ -60,6 +62,92 @@
                 </div>
             </div>
         </div>
+
+<?php if (pll_current_language() == 'en') { ?>
+
+        <?php if( is_front_page() ):  ?>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-xl-6">
+                    <h1><?php echo get_field('zagolovok_h1_en', 7); ?></h1>
+                    <p><?php echo get_field('podzagolovok_en', 7); ?></p>
+                </div>
+                <div class="col-lg-4 col-xl-6">
+                    <a href="#order" class="btn-header">Take consultation</a>
+                </div>
+            </div>
+        </div>
+
+        <?php elseif( is_category() ):  ?>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-xl-6">
+                    <h1><?php single_cat_title(); ?></h1>
+                    <p><?php echo category_description(); ?></p>
+                </div>
+            </div>
+        </div>
+
+        <?php elseif( is_home() ):  ?>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-xl-6">
+                    <h1>Blog</h1>
+                    <p>Our news</p>
+                </div>
+                <div class="col-lg-4 col-xl-6">
+                    <a href="<?php echo get_permalink(202); ?>" class="btn-header">Take consultation</a>
+                </div>
+            </div>
+        </div>
+
+        <?php elseif( is_post_type_archive('portfolio') ):  ?>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-xl-6">
+                    <h1>Portfolio</h1>
+                    <p>Our cases</p>
+                </div>
+                <div class="col-lg-4 col-xl-6">
+                    <a href="<?php echo get_permalink(202); ?>" class="btn-header">Take consultation</a>
+                </div>
+            </div>
+        </div>
+
+        <?php elseif( is_404() ):  ?>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-xl-6">
+                    <h1>404!</h1>
+                </div>
+                <div class="col-lg-4 col-xl-6">
+                    <a href="<?php echo get_permalink(202); ?>" class="btn-header">Take consultation</a>
+                </div>
+            </div>
+        </div>
+
+        <?php else:  ?>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-xl-6">
+                    <h1><?php echo get_field('zagolovok_h1_en', 7); ?></h1>
+                    <p><?php echo get_field('podzagolovok_en', 7); ?></p>
+                </div>
+                <div class="col-lg-4 col-xl-6">
+                    <a href="<?php echo get_permalink(202); ?>" class="btn-header">Take consultation</a>
+                </div>
+            </div>
+        </div>
+
+        <?php endif;  ?>
+
+ <?php } else { ?>
 
         <?php if( is_front_page() ):  ?>
 
@@ -142,5 +230,7 @@
         </div>
 
         <?php endif;  ?>
+
+<?php       } ?>
 
     </header>

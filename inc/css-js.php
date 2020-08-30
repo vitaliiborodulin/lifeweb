@@ -15,6 +15,7 @@
         wp_enqueue_script('jquery-fancybox', 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', [], null, true);
         wp_enqueue_script('slick', LW_DIR_JS . 'slick.min.js',  [], null, true);
         wp_enqueue_script('template', LW_DIR_JS . 'template.js',  [], null, true);
+        wp_enqueue_script('main', LW_DIR_JS . 'main.js',  [], null, true);
     });
 
     add_filter( 'nav_menu_css_class', 'add_my_class_to_nav_menu', 10, 4 );

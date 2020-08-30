@@ -21,6 +21,40 @@ header {
     padding: 50px 0 170px;
 }
 
+/* language switcher */
+header .lang {
+    align-items: center;
+}
+
+header .lang .lang-item {
+    padding: 0 10px;
+    font-size: 16px;
+    transition: ease .4s;
+}
+
+header .lang .lang-item a {
+    color: inherit;
+    text-transform: uppercase;
+    color: #5e5556;
+    font-weight: 600;
+}
+
+header .lang .lang-item a:hover {
+    color: #4360af;
+    text-decoration: none;
+}
+
+#mobile-menu .lang .lang-item {
+    margin: 0 10px 20px;
+    font-size: 16px;
+}
+
+#mobile-menu .lang .lang-item a:hover {
+    color: #5e5556;
+}
+
+/* contact form */
+
 #form-order-file {
     margin-bottom: 10px;
 }
@@ -48,7 +82,21 @@ header {
     text-align: center;
 }
 
+
+.home .project-info .project-name {
+    font-size: 17px!important;
+    width: 50%!important;
+}
+
+.home .project-info .option-list{
+    justify-content: center!important;
+    width: 50%!important;
+}
+
 /* portfolio */
+.pagination .page-numbers {
+    padding: 0 10px;
+}
 
 .home .cases h2 > a {
     color: inherit;
@@ -82,11 +130,30 @@ header {
     transition: opacity 0.3s;
 }
 
+.card-title {
+    line-height: 1;
+}
+
 .card-title a {
     color: inherit;
 }
 
 .card-title a:hover {
+    text-decoration: none;
+}
+
+.single h2, .blog h2, .page:not(.home) h2, .card-title {
+    color: #635454;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1;
+}
+/* blog */
+.blog h2 a {
+    color: inherit;
+}
+
+.blog h2 a:hover {
     text-decoration: none;
 }
 
@@ -122,4 +189,19 @@ footer .footer__map {
 	.footer-list .sub-menu li{
 		text-align: center;
 	 }
+}
+
+/* sitemap */
+.wsp-container h2 {
+    font-size: 20px!important;
+    margin: 10px 0;
+}
+
+.wsp-container ul,ol {
+    /* list-style-type: disc; */
+    padding-left: 40px;
+}
+
+.wsp-container li {
+    list-style-type: disc;
 }

@@ -11,10 +11,9 @@
         <div class="row">
 			<?php if(have_posts()): 
 					while(have_posts()): the_post(); ?>
-						<div class="col-lg-10">
-							<h2><?php the_title() ?></h2>
-							
-							<span><?php the_content() ?></span>
+						<div class="col-12">
+							<h2><?php the_title() ?></h2>							
+							<div><?php the_content() ?></div>
 						</div>
 					<?php endwhile; ?>
 			<?php endif; ?>

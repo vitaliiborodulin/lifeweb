@@ -18,6 +18,17 @@
 		// add_theme_support('post-formats', ['aside', 'quote']);
 		
 		add_image_size('case-thumb', 400, 300, true);
+
+		add_theme_support( 'html5', [ 
+			// 'navigation-widgets',
+			'comment-list',
+			'comment-form',
+			'search-form',
+			'gallery',
+			'caption',
+			'script',
+			'style',
+		] );
 	});
 
 	include_once('inc/modules/portfolio.php');
