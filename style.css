@@ -205,3 +205,10 @@ footer .footer__map {
 .wsp-container li {
     list-style-type: disc;
 }
+
+#wpadminbar #wp-admin-bar-wp-logo>.ab-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+

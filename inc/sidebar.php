@@ -3,9 +3,9 @@
 add_action('widgets_init', function(){
 
     register_sidebar([
-        'name' => 'Metrika',
-        'id' => 'sidebar-metrika',
-        'description' => 'Для метрики',
+        'name' => 'test',
+        'id' => 'sidebar-test',
+        'description' => 'Для теста',
         'before_widget' => '',
         'after_widget'  => '',
         'before_title' => '',
