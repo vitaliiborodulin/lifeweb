@@ -19,6 +19,15 @@
                         <p class="text-center"><a class="footer__map" href="<?php echo get_permalink(320); ?>">Site map</a></p>
                     </div>
 
+                <?php } elseif (pll_current_language() == 'sr' ) { ?>
+
+                    <div class="col-12">
+                        <p class="text-center">© 2008-<?php echo date('Y'); ?>   LifeWEB    All right reserved.</p>
+                        <p class="text-center">The information on the website life-web.ru is for informational purposes only and is not a public offer<br> defined by the provisions of Article 437 (2) of the Civil Code of the Russian Federation.</p>
+                        <p class="text-center">For detailed information on the cost of services, please send your message using a special contact form on our website</p>
+                        <p class="text-center"><a class="footer__map" href="<?php echo get_permalink(407); ?>">Мапа сајта</a></p>
+                    </div>
+
                 <?php } else { ?>
 
                     <div class="col-12">
@@ -47,7 +56,7 @@
                 <div class="col-auto">
                     <ul class="lang">
                         <?php if ( function_exists('pll_the_languages') ) {
-                            pll_the_languages(['display_names_as' => 'slug']);  
+                            pll_the_languages(['display_names_as' => 'slug', 'show_flags' => 1]);  
                         } ?>
                     </ul>
                 </div>

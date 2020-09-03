@@ -149,11 +149,87 @@ header .lang .lang-item a:hover {
     line-height: 1;
 }
 /* blog */
-.blog h2 a {
+.blog-box {
+    padding: 30px 0;
+    background-color: #d8e4ef;
+}
+ .blog-text a {
     color: inherit;
 }
 
-.blog h2 a:hover {
+.blog-text a:hover {
+    color: #307bc1;
+    text-decoration: none;
+}
+
+.blog-item {
+    /* margin-bottom: 15px; */
+    height: 100%;
+    background-color: #fff;
+}
+
+.blog-item:hover:after {
+    box-shadow: 0 0 0 11px #307bc1 inset;
+}
+
+.blog-item::after {
+    pointer-events: none;
+    content: ' ';
+    display: block;
+    position: absolute;
+    z-index: 5;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: 0 0 0 0 #3accc3 inset;
+    -webkit-transition: all 220ms;
+    transition: all 220ms;
+}
+
+.blog-text {
+    flex-grow: 1;
+    padding: 16px 20px 6px;
+}
+
+.blog-text .blog-title {
+    font-size: 24px;
+}
+
+.blog-text .blog-title:hover {
+    color: #307bc1;
+}
+
+/* page */
+
+.inner-page-list ul {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+}
+
+.inner-page-list li {
+    border: 1px solid #000;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    transition: all 0.5s ease;
+}
+
+.inner-page-list li:hover {
+    background-color: #307bc1;
+    color: #fff;
+}
+
+.inner-page-list li a {
+    color: inherit;
+}
+
+.inner-page-list li a:hover {
     text-decoration: none;
 }
 

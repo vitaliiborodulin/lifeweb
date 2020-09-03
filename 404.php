@@ -14,6 +14,12 @@
             <h2>Page not found</h2>
         </div>
 
+        <?php } elseif (pll_current_language() == 'sr' ) { ?>
+
+        <div class="row justify-content-center">
+            <h2>Страница није пронађена</h2>
+        </div>
+
         <?php } else { ?>
         
         <div class="row justify-content-center">

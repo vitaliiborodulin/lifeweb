@@ -35,7 +35,7 @@
                         <div class="col-auto d-none d-sm-block offset-0 offset-xl-1">
                             <ul class="lang">
                                 <?php if ( function_exists('pll_the_languages') ) {
-                                    pll_the_languages(['display_names_as' => 'slug']);  
+                                    pll_the_languages(['display_names_as' => 'slug', 'show_flags' => 1]);  
                                 } ?>
 							</ul>
                         </div>
@@ -146,6 +146,90 @@
         </div>
 
         <?php endif;  ?>
+
+<?php } elseif (pll_current_language() == 'sr' ) { ?>
+
+    <?php if( is_front_page() ):  ?>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-xl-6">
+                <h1><?php echo get_field('zagolovok_h1_sr', 7); ?></h1>
+                <p><?php echo get_field('podzagolovok_sr', 7); ?></p>
+            </div>
+            <div class="col-lg-4 col-xl-6">
+                <a href="#order" class="btn-header">Консултације</a>
+            </div>
+        </div>
+    </div>
+
+    <?php elseif( is_category() ):  ?>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-xl-6">
+                <h1><?php single_cat_title(); ?></h1>
+                <p><?php echo category_description(); ?></p>
+            </div>
+        </div>
+    </div>
+
+    <?php elseif( is_home() ):  ?>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-xl-6">
+                <h1>Блог</h1>
+                <p>Наше вести</p>
+            </div>
+            <div class="col-lg-4 col-xl-6">
+                <a href="<?php echo get_permalink(360); ?>" class="btn-header">Консултације</a>
+            </div>
+        </div>
+    </div>
+
+    <?php elseif( is_post_type_archive('portfolio') ):  ?>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-xl-6">
+                <h1>Портфолио</h1>
+                <p>Наши случајеви</p>
+            </div>
+            <div class="col-lg-4 col-xl-6">
+                <a href="<?php echo get_permalink(360); ?>" class="btn-header">Консултације</a>
+            </div>
+        </div>
+    </div>
+
+    <?php elseif( is_404() ):  ?>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-xl-6">
+                <h1>404!</h1>
+            </div>
+            <div class="col-lg-4 col-xl-6">
+                <a href="<?php echo get_permalink(360); ?>" class="btn-header">Консултације</a>
+            </div>
+        </div>
+    </div>
+
+    <?php else:  ?>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-xl-6">
+                <h1><?php echo get_field('zagolovok_h1_sr', 7); ?></h1>
+                <p><?php echo get_field('podzagolovok_sr', 7); ?></p>
+            </div>
+            <div class="col-lg-4 col-xl-6">
+                <a href="<?php echo get_permalink(360); ?>" class="btn-header">Консултације</a>
+            </div>
+        </div>
+    </div>
+
+    <?php endif;  ?>
 
  <?php } else { ?>
 

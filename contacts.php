@@ -23,6 +23,23 @@ Template Name: Contacts
             </div>
         </div>
     </section>
+
+<?php } elseif (pll_current_language() == 'sr' ) { ?>
+
+    <section class="order" id="order">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <h2>Пошаљите своју пријаву</h2>
+                </div>
+                <div class="col-md-9 col-lg-7 col-xl-6">
+                    <div class="container-form">
+                        <?php echo do_shortcode('[contact-form-7 id="455" title="Форма на контактах sr"]');  ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     
 <?php } else { ?>
     
